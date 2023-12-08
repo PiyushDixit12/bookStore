@@ -41,7 +41,7 @@ export const CheckOutForm = () => {
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title>Checkout form</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>  <Formik
                     initialValues={initialValues}
@@ -51,30 +51,30 @@ export const CheckOutForm = () => {
                     {({errors,touched}) => (
                         <Form>
                             <div>
-                                <label htmlFor="fullName">Full Name:</label>
-                                <Field type="text" name="fullName" />
+                                <label htmlFor="fullName" className=" fs-5">Full Name:</label>
+                                <Field type="text" name="fullName" className=" w-100 rounded-2 border border-dark border-1 p-1" />
                                 <ErrorMessage name="fullName" component="div" className="error text-danger " />
                             </div>
 
                             <div>
                                 <label htmlFor="email">Email:</label>
-                                <Field type="email" name="email" />
+                                <Field type="email" name="email" className=" w-100 rounded-2 border border-dark border-1 p-1" />
                                 <ErrorMessage name="email" component="div" className="error text-danger" />
                             </div>
 
                             <div>
                                 <label htmlFor="address">Shipping Address:</label>
-                                <Field as="textarea" name="address" />
+                                <Field as="textarea" name="address" className=" w-100 rounded-2 border border-dark border-1 p-1" />
                                 <ErrorMessage name="address" component="div" className="error text-danger" />
                             </div>
 
                             <div>
                                 <label htmlFor="creditCard">Credit Card Number:</label>
-                                <Field type="text" name="creditCard" />
+                                <Field type="text" name="creditCard" className=" w-100 rounded-2 border border-dark border-1 p-1" />
                                 <ErrorMessage name="creditCard" component="div" className="error text-danger" />
                             </div>
 
-                            <button type="submit" className="btn btn-outline-primary">Place Order</button>
+                            <button type="submit" className="btn btn-outline-primary row  w-50 px-5 my-3 mx-5">Place Order</button>
                         </Form>
                     )}
                 </Formik>
